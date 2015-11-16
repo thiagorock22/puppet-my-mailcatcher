@@ -20,7 +20,8 @@ class mymailcatcher {
 
     exec { 'install-mailcatcher':
         path => '/usr/bin',
-        command => 'sudo gem install mailcatcher'
+        command => 'sudo gem install mailcatcher',
+        timeout => 300
     }
 
     file { '/etc/init/mailcatcher.conf' :
