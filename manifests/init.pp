@@ -1,4 +1,4 @@
-class mymailcatcher {
+class mailcatcher {
 
     Package['libsqlite3-dev']
         -> Package['ruby1.9.1-dev']
@@ -26,7 +26,7 @@ class mymailcatcher {
 
     file { '/etc/init/mailcatcher.conf' :
         path => '/etc/init/mailcatcher.conf',
-        source  => 'puppet:///modules/mymailcatcher/service.conf',
+        source  => 'puppet:///modules/mailcatcher/service.conf',
         ensure => file
     }
 }
